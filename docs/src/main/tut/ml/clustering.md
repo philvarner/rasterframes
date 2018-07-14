@@ -32,7 +32,7 @@ import spark.implicits._
 The first step is to load multiple bands of imagery and construct a single RasterFrame from them.
 
 ```tut:silent
-val fileAndFrameNames = (1 to 4) map (s"L8-B$_-Elkton-VA.tiff", s"band_$_")
+val fileAndFrameNames = (1 to 4) map { b => (s"L8-B$b-Elkton-VA.tiff", s"band_$b") }
 
 // For each identified band, load the associated image file, convert to a RasterFrame, and join
 val joinedRF = fileAndFrameNames.
