@@ -51,7 +51,7 @@ tileBackAgain.drop("tileData").show(5, 50)
 ## Writing to Parquet
 
 It is often useful to write Spark results in a form that is easily reloaded for subsequent analysis. 
-The [Parquet](https://parquet.apache.org/)columnar storage format, native to Spark, is ideal for this. RasterFrames
+The [Parquet](https://parquet.apache.org/) columnar storage format, native to Spark, is ideal for this. RasterFrames
 work just like any other DataFrame in this scenario as long as @scaladoc[`rfInit`][rfInit] is called to register
 the imagery types.
 
